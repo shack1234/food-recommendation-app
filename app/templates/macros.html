@@ -1,0 +1,26 @@
+
+{% macro display(reviews) %}
+<div class="container-fluid">
+        <div class="row">
+                {% if reviews %}
+                    {% for category in reviews %}
+                    <div class="col-md-12" >
+                        <div class="thumbnail" id="carded">
+                            <h5 class="card-header">{{category.title}}</h5>
+                            <div class="card-body">
+                                    <p>{{category.post}}</p>
+                                    <footer class="blockquote-footer text-center" > Posted by: {{category.user.username}}</footer>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                <div class="card w-90 mb-3">
+                    <div class="card-body">
+                        <p class="card-title">Food Has 0 reviews</p>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+</div>
+{% endmacro %}

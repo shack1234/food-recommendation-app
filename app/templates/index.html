@@ -1,0 +1,92 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+{% block styles%}
+{{ super() }}
+<link href="https://fonts.googleapis.com/css?family=Akronim|Bellefair|Joti+One" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static',filename='CSS/main.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<div class="col-md-12">
+  <div class="col-md-6">
+    <div class="card-group">
+       <div class="card">
+            <a href="{{url_for('main.food')}}"><img class="card-img-top" src="{{url_for('static', filename='serena.webp')}} " alt="Card image cap"></a>
+            <div class="card-body">
+            <br>
+           <a href="{{url_for('main.food')}}" style="font-size:larger"> Nairobi Serena Hotel<h5 class="card-title"></h5></a>
+            <p class="card-text"style="font-size:larger">Its collection of 35 unique hotels, resorts, safari lodges and camps, palaces and forts located in East Africa (Kenya, Tanzania, Zanzibar, Rwanda and Uganda)</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <div class="col-md-6">
+        <div class="card">
+            <a href="{{url_for('main.Bolognese')}}"><img class="card-img-top" src="{{url_for('static', filename='serena.webp')}} "  alt="Weston Hotel"></a>
+            <div class="card-body">
+            <a href="{{url_for('main.Bolognese')}}" style="font-size:larger"><h5 class="card-title" style="font-size:larger">Weston Hotel</h5></a>
+            <p class="card-text" style="font-size:larger">The Weston Hotel is nestled away in the peaceful surroundings of Lang'ata area in Nairobi city. The Hotel offers air-conditioned rooms with free WiFi..</p>
+         <br>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  <div class="col-md-12">
+  <div class="col-md-6">
+    <div class="card-group">
+       <div class="card">
+             <a href="{{url_for('main.Chicken')}}"><img class="card-img-top" src="{{url_for('static', filename='nai.jpeg')}} " alt="Card image cap"></a>
+            <div class="card-body">
+             <a href="{{url_for('main.Chicken')}}"><h5 class="card-title" style="font-size:larger">Card title</h5></a>
+            <p class="card-text" style="font-size:larger">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <div class="col-md-6">
+        <div class="card">
+             <a href="{{url_for('main.Fish')}}"><img class="card-img-top" src="{{url_for('static', filename='nai.jpeg')}} "  alt="Card image cap"></a>
+            <div class="card-body">
+            <a href="{{url_for('main.Fish')}}"> <h5 class="card-title"style="font-size:larger">Card title</h5></a>
+            <p class="card-text"style="font-size:larger">This card has supporting text below as a natural lead-in to additional content.</p>
+           
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+  <div class="col-md-6">
+    <div class="card-group">
+       <div class="card">
+            <img class="card-img-top" src="{{url_for('static', filename='nai.jpeg')}} " alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title"style="font-size:larger">Card title</h5>
+            <p class="card-text"style="font-size:larger">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <div class="col-md-6">
+        <div class="card">
+            <img class="card-img-top" src="{{url_for('static', filename='nai.jpeg')}} "  alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title"style="font-size:larger">Card title</h5>
+            <p class="card-text"style="font-size:larger">This card has supporting text below as a natural lead-in to additional content.</p>
+          
+            </div>
+        </div>
+    </div>
+</div>
+  
+  
+   
+
+
+{% endblock %}

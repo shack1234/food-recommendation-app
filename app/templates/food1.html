@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+<!-- Styles block -->
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/main.css')}}">
+{% endblock %}
+<!-- Content block -->
+{% block content %}
+<div class="container">
+    <!-- Poster background -->
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 posterPath" >
+        <img class="card-img-top" src="{{url_for('static', filename='bolo.jpeg')}}">
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
+            <h3>Bolognese</h3>
+        <p>Bolognese sauce is a meat-based sauce in Italian cuisine, typical of the city of Bologna. It is customarily used to dress tagliatelle al ragù and to prepare lasagne alla bolognese. In the absence of tagliatelle, it can also be used with other broad, flat pasta shapes, such as pappardelle or fettuccine </p>
+           
+            <a class="ratings" href="{{url_for('main.new_review1')}}"> Write a new review</a>
+        </div>
+    </div>
+    <br>   <br>   <br>   <br>   <br>   <br>
+    <div class="row">
+        <h1>Reviews</h1>
+        <hr>
+        <div class="content">
+            {{ macro.display(bolognese) }}
+        </div>
+    </div>
+</div>
+{% endblock %}
