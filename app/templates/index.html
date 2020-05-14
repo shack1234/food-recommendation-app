@@ -1,92 +1,151 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro%}
-
 {% block styles%}
 {{ super() }}
 <link href="https://fonts.googleapis.com/css?family=Akronim|Bellefair|Joti+One" rel="stylesheet">
 <link rel="stylesheet" href="{{url_for('static',filename='CSS/main.css')}}">
 {% endblock %}
-
 {% block content %}
 <div class="container">
-<div class="col-md-12">
+<div class="row">
   <div class="col-md-6">
     <div class="card-group">
-       <div class="card">
-            <a href="{{url_for('main.food')}}"><img class="card-img-top" src="{{url_for('static', filename='serena.webp')}} " alt="Card image cap"></a>
+       <div class="card" style="margin: 3%; ">
+         <div class="card-image">
+          <a href="{{url_for('main.food')}}"><img class="card-img-top" src="{{url_for('static', filename='KFC_0.png')}} " alt="Card image cap"></a>
+         </div>
+            
             <div class="card-body">
             <br>
-           <a href="{{url_for('main.food')}}" style="font-size:larger"> Nairobi Serena Hotel<h5 class="card-title"></h5></a>
-            <p class="card-text"style="font-size:larger">Its collection of 35 unique hotels, resorts, safari lodges and camps, palaces and forts located in East Africa (Kenya, Tanzania, Zanzibar, Rwanda and Uganda)</p>
+            <div class="card-image">
+              <a href="{{url_for('main.food')}}" style="font-size:larger;"> KFC<h5 class="card-title"></h5></a>
+            </div>
+           
+            <p class="card-content"style="font-size:larger">KFC is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken.</p>
+            <p class="card-footer"> Located in East Africa (Kenya, Tanzania, Zanzibar, Rwanda and Uganda)</p>
             </div>
         </div>
     </div>
   </div>
-
     <div class="col-md-6">
-        <div class="card">
-            <a href="{{url_for('main.Bolognese')}}"><img class="card-img-top" src="{{url_for('static', filename='serena.webp')}} "  alt="Weston Hotel"></a>
+        <div class="card" style="margin: 3%;">
+          <div class="card-image">
+            <a href="{{url_for('main.Bolognese')}}"><img class="card-img-top" style="padding-bottom: 5%;" src="{{url_for('static', filename='burgerking.png')}} "  alt="Weston Hotel"></a>
+          </div>
+            
             <div class="card-body">
-            <a href="{{url_for('main.Bolognese')}}" style="font-size:larger"><h5 class="card-title" style="font-size:larger">Weston Hotel</h5></a>
-            <p class="card-text" style="font-size:larger">The Weston Hotel is nestled away in the peaceful surroundings of Lang'ata area in Nairobi city. The Hotel offers air-conditioned rooms with free WiFi..</p>
+            <a href="{{url_for('main.Bolognese')}}" style="font-size:larger">Burger King<h5 class="card-title" style="font-size:larger"></h5></a>
+            <p class="card-content" style="font-size:larger">Burger King is an American multinational chain of hamburger fast food restaurants.Headquartered in the unincorporated area of Miami-Dade County, Florida, the company was founded in 1953 as Insta-Burger King, a Jacksonville, Florida–based restaurant chain.</p>
+            <p class="card-footer"> Located in Lang'ata area in Nairobi city</p>
          <br>
             </div>
         </div>
     </div>
 </div>
   
-  <div class="col-md-12">
+  <div class="row">
   <div class="col-md-6">
     <div class="card-group">
-       <div class="card">
-             <a href="{{url_for('main.Chicken')}}"><img class="card-img-top" src="{{url_for('static', filename='nai.jpeg')}} " alt="Card image cap"></a>
-            <div class="card-body">
-             <a href="{{url_for('main.Chicken')}}"><h5 class="card-title" style="font-size:larger">Card title</h5></a>
-            <p class="card-text" style="font-size:larger">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
+      <div class="card"style="margin: 3%;padding-bottom: 10%">
+        <div class="card-image">
+          <img class="card-img-top" style="padding-bottom: 5%;" src="{{url_for('static', filename='pizzahut.jpeg')}} "  alt="Card image cap">
         </div>
+          
+          <div class="card-body">
+          <h5 class="card-title"style="font-size:larger">PizzaHut</h5>
+          <p class="card-content"style="font-size:larger">Pizza Hut is an American restaurant chain and international franchise which was founded in 1958 in Wichita, Kansas by Dan and Frank Carney.</p>
+          <p class="card-footer"> Located in Nairobi city</p>
+        
+          </div>
+      </div>
     </div>
   </div>
-
     <div class="col-md-6">
-        <div class="card">
-             <a href="{{url_for('main.Fish')}}"><img class="card-img-top" src="{{url_for('static', filename='nai.jpeg')}} "  alt="Card image cap"></a>
+        <div class="card"style="margin: 3%;">
+          <div class="card-image">
+            <a href="{{url_for('main.Fish')}}"><img class="card-img-top" src="{{url_for('static', filename='dbonnairs.jpg')}} "  alt="Card image cap"></a>
+          </div>
+             
             <div class="card-body">
-            <a href="{{url_for('main.Fish')}}"> <h5 class="card-title"style="font-size:larger">Card title</h5></a>
-            <p class="card-text"style="font-size:larger">This card has supporting text below as a natural lead-in to additional content.</p>
+            <a href="{{url_for('main.Fish')}}"> <h5 class="card-title"style="font-size:larger">Debonnairs Pizza</h5></a>
+            <p class="card-content"style="font-size:larger">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-footer"> Located in Nairobi city</p>
            
             </div>
         </div>
     </div>
 </div>
-
-<div class="col-md-12">
+<div class="row">
   <div class="col-md-6">
     <div class="card-group">
-       <div class="card">
-            <img class="card-img-top" src="{{url_for('static', filename='nai.jpeg')}} " alt="Card image cap">
+       <div class="card"style="margin: 3%;">
+        <div class="card-image">
+          <img class="card-img-top" src="{{url_for('static', filename='pizzainn.jpg')}} " alt="Card image cap">
+        </div>
+            
             <div class="card-body">
-            <h5 class="card-title"style="font-size:larger">Card title</h5>
-            <p class="card-text"style="font-size:larger">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h5 class="card-title"style="font-size:larger">Pizza Inn</h5>
+            <p class="card-content"style="font-size:larger">Leading pizza brand in Kenya, Pizza Inn continues to deliver the best-tasting pizza using only the freshest ingredients.The pizza dough is made fresh daily in store. Our slogan, "Must be the Pizza!" captures the reason why friends, colleagues and families come to enjoy our famous pizzas. And with a great range to choose from, Pizza Inn satisfies any hungry belly. Pizza Inn can be found in food courts boasting bright and contemporary décor. </p>
+            <p class="card-footer"> Located in Nairobi city</p>
             </div>
         </div>
     </div>
   </div>
-
     <div class="col-md-6">
-        <div class="card">
-            <img class="card-img-top" src="{{url_for('static', filename='nai.jpeg')}} "  alt="Card image cap">
+        <div class="card"style="margin: 5%;">
+          <div class="card-image">
+            <img class="card-img-top" src="{{url_for('static', filename='Chicken-Inn-.jpg')}} "  alt="Card image cap">
+          </div>
+            
             <div class="card-body">
-            <h5 class="card-title"style="font-size:larger">Card title</h5>
-            <p class="card-text"style="font-size:larger">This card has supporting text below as a natural lead-in to additional content.</p>
+            <h5 class="card-title"style="font-size:larger">Chicken inn
+            </h5>
+            <p class="card-content"style="font-size:larger">Chicken Inn is famous for fried chicken and renowned for serving tasty fried chicken pieces and a wide range of other menu items including hand-cut chips made fresh daily, fried chicken burgers, slow-roasted rotisserie chicken, and other menu favourites including Spicy Wings, Chicken Bites, and the favourite.</p>
+            <p class="card-footer"> Located in Nairobi city</p>
           
             </div>
         </div>
     </div>
-</div>
+</div> 
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a href="https://twitter.com/login" target="_blank">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.instagram.com/" target="_blank">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/" target="_blank">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright text-muted text-center">
+          Copyright &copy; Food Advisor 2020
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
   
   
    
-
-
 {% endblock %}

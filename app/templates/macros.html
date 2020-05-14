@@ -5,13 +5,13 @@
                 {% if reviews %}
                     {% for category in reviews %}
                     <div class="col-md-12" >
-                        <div class="thumbnail" id="carded">
-                            <h5 class="card-header">{{category.title}}</h5>
+                       
+                            <h5 class="card-header" style="color:blue">Title : {{category.title}}</h5>
                             <div class="card-body">
-                                    <p>{{category.post}}</p>
+                                    <ptyle="color:blue">Review : {{category.post}}</p>
                                     <footer class="blockquote-footer text-center" > Posted by: {{category.user.username}}</footer>
                             </div>
-                        </div>
+                       
                     </div>
                     {% endfor %}
                 {% else %}

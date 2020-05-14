@@ -5,11 +5,12 @@
     {{ super() }}
     <link rel="stylesheet" href="{{url_for('static',filename='CSS/main.css')}}">
 {% endblock %}
-
 <!-- Content block -->
+
 {% block content %}
 <div class="container">
     <!-- Poster background -->
+    <br>
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 posterPath" >
         <img class="card-img-top" src="{{url_for('static', filename='chick.jpeg')}}">

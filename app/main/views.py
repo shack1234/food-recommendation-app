@@ -10,8 +10,6 @@ import secrets
 import os
 from PIL import Image
 
-
-
 @main.route('/')
 def index():
     '''
@@ -70,12 +68,6 @@ def updateprofile(name):
         return redirect(url_for('.profile',name = name))
     return render_template('profile/updateprofile.html',form =form)
 
-
-
-
-
-
-
 @main.route('/add', methods=['GET','POST'])
 def add_restraurant():
    
@@ -93,33 +85,6 @@ def add_restraurant():
         
     return render_template('add_rest.html', rest_form=rest_form)
 
-# #new-review file
-# @main.route('/food/review/new/', methods = ['GET','POST'])
-# @login_required
-# def new_review():
-#     form = ReviewForm()
-#     if form.validate_on_submit():
-#         title = form.name.data
-#         review = form.review.data
-#         # Updated review instance
-#         new_review = Review(food_id=food.id,food_name=name,image_path=food.image,food_review=review,user=current_user)
-#         # save review method
-#         new_review.save_review()
-#         return redirect(url_for('.food'))
-
-#     title = f'food review'
-#     return render_template('new_review.html',title = title, review_form=form, food=food)
-#movie file
-
-# @main.route('/food')
-# def food():
-#     '''
-#     View movie page function that returns the movie details page and its data
-#     '''
-#     title = food
-#     reviews = Review
-#     return render_template('food.html',title = food,reviews = reviews)
-
 @main.route('/food/review/new/', methods = ['GET','POST'])
 @login_required
 def new_review():
@@ -133,8 +98,6 @@ def new_review():
         new_review_object.save_review()
         return redirect(url_for('main.index'))
     return render_template('new_review.html', form = form)
-
-
 # new review 2
 @main.route('/food/review/new/', methods = ['GET','POST'])
 @login_required
@@ -147,9 +110,8 @@ def new_review1():
         user_id = current_user
         new_review_object = Review(post=post,user_id=current_user._get_current_object().id,category=category,title=title)
         new_review_object.save_review()
-        return redirect(url_for('main.index'))
+        return redirect(url_for('main.Bolognese'))
     return render_template('new_review1.html', form = form)
-
 
 # new review 3
 @main.route('/food/review/new/', methods = ['GET','POST'])
@@ -163,9 +125,8 @@ def new_review2():
         user_id = current_user
         new_review_object = Review(post=post,user_id=current_user._get_current_object().id,category=category,title=title)
         new_review_object.save_review()
-        return redirect(url_for('main.index'))
+        return redirect(url_for('main.Chicken'))
     return render_template('new_review2.html', form = form)
-
 
 # new review 4
 @main.route('/food/review/new/', methods = ['GET','POST'])
@@ -179,14 +140,8 @@ def new_review3():
         user_id = current_user
         new_review_object = Review(post=post,user_id=current_user._get_current_object().id,category=category,title=title)
         new_review_object.save_review()
-        return redirect(url_for('main.index'))
+        return redirect(url_for('main.Fish'))
     return render_template('new_review3.html', form = form)
-
-
-
-
-
-
 
 @main.route('/food/burger')
 def food():
@@ -195,8 +150,8 @@ def food():
     bolognese = Review.query.filter_by(category = 'Bolognese').all()
     chicken = Review.query.filter_by(category = 'Chicken').all()
     fish = Review.query.filter_by(category = 'Fish').all()
+    
     return render_template('food.html', burger = burger, title = title, chicken = chicken, fish = fish, bolognese = bolognese)
-
 
 @main.route('/food/bolognese')
 def Bolognese():
@@ -205,8 +160,8 @@ def Bolognese():
     burger = Review.query.filter_by(category = 'Burger').all()
     chicken = Review.query.filter_by(category = 'Chicken').all()
     fish = Review.query.filter_by(category = 'Fish').all()
-    return render_template('food1.html', burger = burger, title = title, chicken = chicken, fish = fish, bolognese = bolognese)
 
+    return render_template('food1.html', burger = burger, title = title, chicken = chicken, fish = fish, bolognese = bolognese)
 
 @main.route('/food/chicken')
 def Chicken():
@@ -217,7 +172,6 @@ def Chicken():
     fish = Review.query.filter_by(category = 'Fish').all()
     return render_template('food2.html', burger = burger, title = title, chicken = chicken, fish = fish, bolognese = bolognese)
 
-
 @main.route('/food/fish')
 def Fish():
     title ='food Fish'
@@ -225,5 +179,5 @@ def Fish():
     bolognese = Review.query.filter_by(category = 'Bolognese').all()
     burger = Review.query.filter_by(category = 'Burger').all()
     chicken = Review.query.filter_by(category = 'Chicken').all()
-    
+
     return render_template('food3.html', burger = burger, title = title, chicken = chicken, fish = fish, bolognese = bolognese)
