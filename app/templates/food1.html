@@ -1,3 +1,4 @@
+
 {% extends 'base.html'%}
 {% import 'macros.html' as macro%}
 <!-- Styles block -->
@@ -5,6 +6,7 @@
     {{ super() }}
     <link rel="stylesheet" href="{{url_for('static',filename='CSS/main.css')}}">
 {% endblock %}
+
 <!-- Content block -->
 {% block content %}
 <div class="container">
@@ -12,23 +14,27 @@
     <br>
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 posterPath" >
-        <img class="card-img-top" src="{{url_for('static', filename='bolo1.jpeg')}}">
+        <div class="card-image">
+        <img class="card-img-top" src="{{url_for('static', filename='download.jpeg')}}">
+        </div>
         </div>
 
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
-            <h3>Bolognese</h3>
-        <p>Bolognese sauce is a meat-based sauce in Italian cuisine, typical of the city of Bologna. It is customarily used to dress tagliatelle al ragù and to prepare lasagne alla bolognese. In the absence of tagliatelle, it can also be used with other broad, flat pasta shapes, such as pappardelle or fettuccine </p>
+            <h3>Burger</h3>
+        <p>A hamburger (also burger for short) is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled. </p>
            
-            <a class="ratings" href="{{url_for('main.new_review1')}}"> Write a new review</a>
+            <a class="ratings" href="{{url_for('main.new_review')}}"> Write a new review</a>
         </div>
     </div>
-    <br>   <br>   <br>   <br>   <br>   <br>
+    <br>   <br>   <br>   <br>
     <div class="row">
         <h1>Reviews</h1>
         <hr>
         <div class="content">
-            {{ macro.display(bolognese) }}
+            {{ macro.display(burger) }}
         </div>
     </div>
 </div>
 {% endblock %}
+
+

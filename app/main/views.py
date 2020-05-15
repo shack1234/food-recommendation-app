@@ -143,9 +143,9 @@ def new_review3():
         return redirect(url_for('main.Fish'))
     return render_template('new_review3.html', form = form)
 
-@main.route('/food/burger')
+@main.route('/food/chicken')
 def food():
-    title ='food Burger'
+    title ='food chicken'
     burger = Review.query.filter_by(category = 'Burger').all()
     bolognese = Review.query.filter_by(category = 'Bolognese').all()
     chicken = Review.query.filter_by(category = 'Chicken').all()
@@ -153,9 +153,9 @@ def food():
     
     return render_template('food.html', burger = burger, title = title, chicken = chicken, fish = fish, bolognese = bolognese)
 
-@main.route('/food/bolognese')
-def Bolognese():
-    title ='food bolognese'
+@main.route('/food/burger')
+def Burger():
+    title ='food burger'
     bolognese = Review.query.filter_by(category = 'Bolognese').all()
     burger = Review.query.filter_by(category = 'Burger').all()
     chicken = Review.query.filter_by(category = 'Chicken').all()
@@ -163,9 +163,9 @@ def Bolognese():
 
     return render_template('food1.html', burger = burger, title = title, chicken = chicken, fish = fish, bolognese = bolognese)
 
-@main.route('/food/chicken')
-def Chicken():
-    title ='food chicken'
+@main.route('/food/bolognese')
+def Bolognese():
+    title ='food bolognese'
     chicken = Review.query.filter_by(category = 'Chicken').all()
     bolognese = Review.query.filter_by(category = 'Bolognese').all()
     burger = Review.query.filter_by(category = 'Burger').all()

@@ -6,21 +6,20 @@
     <link rel="stylesheet" href="{{url_for('static',filename='CSS/main.css')}}">
 {% endblock %}
 <!-- Content block -->
-
 {% block content %}
 <div class="container">
     <!-- Poster background -->
     <br>
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 posterPath" >
-        <img class="card-img-top" src="{{url_for('static', filename='chick.jpeg')}}">
+        <img class="card-img-top" src="{{url_for('static', filename='bolo1.jpeg')}}">
         </div>
 
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
-            <h3>Chicken</h3>
-        <p>Chicken is the most common type of poultry in the world. Owing to the relative ease and low cost of raising them in comparison to animals such as cattle or hogs, chickens have become prevalent throughout the cuisine of cultures around the world, and their meat has been variously adapted to regional tastes.</p>
+            <h3>Bolognese</h3>
+        <p>Bolognese sauce is a meat-based sauce in Italian cuisine, typical of the city of Bologna. It is customarily used to dress tagliatelle al ragù and to prepare lasagne alla bolognese. In the absence of tagliatelle, it can also be used with other broad, flat pasta shapes, such as pappardelle or fettuccine </p>
            
-            <a class="ratings" href="{{url_for('main.new_review2')}}"> Write a new review</a>
+            <a class="ratings" href="{{url_for('main.new_review1')}}"> Write a new review</a>
         </div>
     </div>
     <br>   <br>   <br>   <br>   <br>   <br>
@@ -28,7 +27,7 @@
         <h1>Reviews</h1>
         <hr>
         <div class="content">
-            {{ macro.display(chicken) }}
+            {{ macro.display(bolognese) }}
         </div>
     </div>
 </div>
