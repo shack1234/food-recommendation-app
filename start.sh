@@ -1,4 +1,4 @@
-export MAIL_USERNAME=''
+export MAIL_USERNAME='@gmail.com'
 export MAIL_PASSWORD=''
 export SECRET_KEY='hello'
 
