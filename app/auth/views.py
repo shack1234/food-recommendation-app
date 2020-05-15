@@ -28,7 +28,7 @@ def register():
         db.session.add(user)
         db.session.commit()
         flash('Registered successfully! an email has been sent to your account')
-        mail_message("Welcome to one minute pitch","email/welcome_user",user.email,user=user)
+        mail_message("Welcome to Food Advisor","email/welcome_user",user.email,user=user)
 
 
         return redirect(url_for('auth.login'))
